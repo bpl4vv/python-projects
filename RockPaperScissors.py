@@ -9,8 +9,24 @@
 def comp(move1, move2):
     if(move1 == move2):
         print("It's a tie!")
-    elif(move1 == "rock")
+    elif(move1 == "rock"):
+        if(move2 == "scissors"):
+            return True
+        else:
+            return False
+    elif(move1 == "paper"):
+        if(move2 == "rock"):
+            return True
+        else:
+            return False
+    elif(move1 == "scissors"):
+        if(move2 == "paper"):
+            return True
+        else:
+            return False
 
 print("Welcome to Rock-Paper-Scissors! This is a 2-player game. Input your moves.")
 p1 = input("Player 1: ")
 p2 = input("Player 2: ")
+if(p1,p2 != "rock","paper","scissors"):
+    
