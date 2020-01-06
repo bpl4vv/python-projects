@@ -9,22 +9,22 @@
 
 def comp(move1, move2):
     if move1 == move2:
-        print("It's a tie!")
+        return 0
     elif move1 == "rock":
         if move2 == "scissors":
-            return True
+            return 1
         else:
-            return False
+            return -1
     elif move1 == "paper":
         if move2 == "rock":
-            return True
+            return 1
         else:
-            return False
-    else:
+            return -1
+    elif move1 == "scissors":
         if move2 == "paper":
-            return True
+            return 1
         else:
-            return False
+            return -1
 
 print("Welcome to Rock-Paper-Scissors! This is a 2-player game. Input your moves.")
 q = "" #input if users want to quit
@@ -36,10 +36,12 @@ while q != "quit":
         print("Someone picked a nonexistent move! Pick again.")
         p1 = input("Player 1: ")
         p2 = input("Player 2: ")
-    if(comp(p1,p2)):
+    if(comp(p1,p2) == 1):
         print("Player 1 wins!")
-    else:
+    elif(comp(p1,p2) == -1):
         print("Player 2 wins!")
+    else:
+        print("It's a tie!")
     print("Enter 'quit' to quit. Enter anything else to play again.")
     q = input()
 print("Thanks for playing!")
